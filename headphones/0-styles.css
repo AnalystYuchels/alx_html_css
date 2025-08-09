@@ -1,15 +1,17 @@
 /*--------- REST & VARIABLES ---------*/
 
 :root {
-  --color-primary: #ff4e5b;
-  --color-hover: #ee3945;
+  --color-primary: #ff6565;
+  --color-hover: #fa3d3d;
   --color-dark: #0a1a2f;
-  --color-light: #fff;
+  --color-white: #fff;
+  --color-light: #eee;
   --color-grey: #ccc;
   --color-text: #555;
-  --max-width: 1200px;
+  --max-width: 1000px;
   --spacing: 2rem;
-  --font-main: 'Spin-Cycle-OT', 'Arial', sans-serif;
+  --line-height: 1.8rem;
+  --font-main: 'Source Sans Pro', sans-serif;
 }
 
 *,
@@ -26,8 +28,8 @@ html {
 
 body {
   font-family: var(--font-main);
-  line-height: 1.6;
   color: var(--color-dark);
+  line-height: var(--line-height);
 }
 
 
@@ -37,14 +39,15 @@ p {
   color: var(--color-text);
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .btn {
   background: var(--color-primary);
-  color: var(--color-light);
+  color: var(--color-white);
   font-weight: 700;
   padding: 0.75rem 2.5rem;
   border-radius: 50px;
@@ -58,43 +61,50 @@ background-color: var(--color-hover);
 box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-/*--------- REST & VARIABLES ---------*/
+/*--------- HEADER ---------*/
 
 header {
   background: url('images/headphones_hero_1.jpg') no-repeat center;
 }
 
 .site-header {
-  background: transparent;
-  top: 0;
-  width: 100%;
-  padding: var(--spacing);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 0;
 }
 
-.logo {
-  max-width: 100px;
+.nav-links ul {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-links li {
+  list-style: none;
 }
 
 .nav-links a {
   color: var(--color-light);
+  text-decoration: none;
   font-weight: 600;
   font-size: medium;
-  margin: 1.4rem;
 }
 
-.hero-section {
-  color: var(--color-light);
+.hero {
+  color: var(--color-white);
   text-align: center;
-  padding: 13rem 6rem;
+  padding: 13rem 0;
+}
+
+h1 {
+  font-size: 2.5rem;
 }
 
 .subtitle {
   color: var(--color-light);
   font-size:1rem;
-  font-weight: 700;
+  font-weight: 600;
+  margin-top: 0.6rem;
 }
 
 .hero-text { 
